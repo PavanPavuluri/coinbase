@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+  <li><%= link_to 'Transaction History', edit_user_registration_path %></li>
+  <li><%= link_to 'Account Details', destroy_user_session_path, :method=>'delete' %></li>
+<% else %>
+<h3>Welcome</h3>
+<p>The API is developed to enable the merchants to accept bitcoins and normal currency. To enable 
+
+out API to accept bitcoins we have used the wrapper classes and method provided by the 
+
+coinbase developers.</p>
+
+
+  <h3>Sign up to Access</h3>
+  <%= link_to 'Sign up', new_user_registration_path, :class => 'btn btn-primary btn-large' %>
+ 
+<% end %>
+
